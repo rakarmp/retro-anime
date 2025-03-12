@@ -35,13 +35,28 @@
   
   <style scoped>
   .anime-card {
-    width: 200px;
-    margin: 15px;
-    background-color: #222;
-    border: 1px solid #444;
-    cursor: pointer;
-    transition: transform 0.2s;
+  width: 180px;
+  margin: 10px;
+  background-color: #222;
+  border: 1px solid #444;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+@media (max-width: 500px) {
+  .anime-card {
+    width: 140px;
+    margin: 5px;
   }
+  
+  .anime-card-image img {
+    height: 200px;
+  }
+  
+  .anime-card-content h3 {
+    font-size: 14px;
+  }
+}
   
   .anime-card:hover {
     transform: translateY(-5px);
