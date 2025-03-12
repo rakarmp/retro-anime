@@ -160,6 +160,40 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
+@media (max-width: 768px) {
+  .anime-header {
+    flex-direction: column;
+  }
+  
+  .anime-poster {
+    margin-right: 0;
+    margin-bottom: 20px;
+    flex: none;
+    width: 200px;
+    max-width: 100%;
+    align-self: center;
+  }
+  
+  .trailer-embed iframe {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .trailer-embed iframe {
+    height: 200px;
+  }
+  
+  .anime-info h1 {
+    font-size: 24px;
+  }
+  
+  .anime-info h2, .anime-info h3 {
+    font-size: 18px;
+  }
+}
+
 .anime-detail {
   max-width: 1000px;
   margin: 0 auto;
