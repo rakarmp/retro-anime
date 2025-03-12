@@ -137,6 +137,27 @@
   </script>
   
   <style scoped>
+  @media (max-width: 768px) {
+  .search-box {
+    flex-direction: column;
+  }
+  
+  .search-box button {
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .category-tabs {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .category-tabs button {
+    flex: 1;
+    white-space: nowrap;
+  }
+}
   .home-page {
     max-width: 1200px;
     margin: 0 auto;
@@ -182,10 +203,17 @@
   }
   
   .animes-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -10px; /* Untuk mengimbangi margin pada kartu */
+}
+
+@media (max-width: 480px) {
+  .animes-grid {
+    margin: 0 -5px; /* Lebih kecil untuk mengimbangi margin kartu yang lebih kecil */
   }
+}
   
   .loading {
     text-align: center;
