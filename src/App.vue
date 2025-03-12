@@ -36,6 +36,21 @@ export default defineComponent({
 
 <style>
 /* Global Styles with Retro Theme */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    margin: 0 10px;
+  }
+}
+
 body {
   margin: 0;
   font-family: 'Courier New', monospace;
