@@ -46,5 +46,24 @@ export default {
       console.error(`Error fetching seasonal animes for ${season} ${year}:`, error);
       return [];
     }
+  },
+
+  async getAnimeCharacters(id: number): Promise<any[]> {
+    const response = await fetch(`${API_BASE_URL}/anime/${id}/characters`);
+    const data = await response.json();
+    return data.data || [];
+  },
+  
+  async getAnimeStaff(id: number): Promise<any[]> {
+    const response = await fetch(`${API_BASE_URL}/anime/${id}/staff`);
+    const data = await response.json();
+    return data.data || [];
+  },
+  
+  async getAnimeEpisodes(id: number): Promise<any[]> {
+    const response = await fetch(`${API_BASE_URL}/anime/${id}/episodes`);
+    const data = await response.json();
+    return data.data || [];
   }
 };
+
